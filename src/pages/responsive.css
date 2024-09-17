@@ -1,0 +1,48 @@
+@media screen and (max-width: 900px) {
+    nav{
+        margin: 20px;
+    }
+    .main .content h1{
+        margin: 0; 
+        font-size: 1.25rem;
+    }
+    .main .content h1
+    .myName{
+        font-size-adjust: 0.30;
+    }
+    .main .content h2{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main{
+        width: 50%;
+        height: auto;
+    }
+    .main .content{
+        justify-content: start;
+    }
+    .main .content h1{
+        margin: 0; 
+        font-size: .85rem;
+    }
+    .main .content h2{
+        font-size: .85rem;
+    }
+    .main .content h1
+    .myName{
+        font-size-adjust: 0.20;
+    }
+
+
+    .about-content p{
+        font-size: 1rem;
+      }
+  .about-content{
+    margin:0 40px;
+  }
+  
+  
+  }
+  
