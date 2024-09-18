@@ -29,7 +29,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    nav{
+    #root nav{
         margin-top: 10px;
         flex-direction: column;
         
@@ -61,6 +61,7 @@
         
     } */
     .main .content{
+        margin-top: 10px;
         margin-left: 40px;
         display: flex;
         justify-content: center;
@@ -73,14 +74,14 @@
     }
     .main .content h1{
         margin: 0; 
-        font-size: .85rem;
+        font-size: .95rem;
     }
     .main .content h2{
-        font-size: .85rem;
+        font-size: .95rem;
     }
     .main .content h1
     .myName{
-        font-size-adjust: 0.20;
+        font-size-adjust: 0.25;
     }
     .about-content{
         margin-left:20px;

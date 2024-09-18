@@ -15,7 +15,7 @@ function MainContent() {
         <h1>I'M <span className='myName'>Mohammed Ashhad,</span></h1>
         <h2 style={{textAlign:"center"}}>Software Developer.<br/><br/>Specialized in FrontEnd React Developer</h2>
         {/* <h2></h2> */}
-        <button class="button" id='btn'><a href="#contact">Get in touch</a></button>
+        <button class="button" id='btn'><a href="#contact" style={{textDecoration:"none",color:"#1BFD9C"}}>Get in touch</a></button>
         </div>
         <div className="image">
         <img src={profile} alt="" />

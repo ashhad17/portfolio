@@ -7,11 +7,11 @@ function Footer() {
             <ul class="footer-links">
                 <li><a href="#">Mohammed Ashhad,</a></li>
                 <li><a href="#">Software Developer (Computer Science & Engineering Graduate).</a></li>
-                <li><a href="#">Phone:+91 8197172781</a></li>
-                <li><a href="#">Email: mohammedashhad2105@gmail.com</a></li>
+                <li><a href="tel:+918197172781"  target='_blank'>Phone:+91 8197172781</a></li>
+                <li><a href="mailto:mohammedashhad2105@gmail.com"  target='_blank'>Email: mohammedashhad2105@gmail.com</a></li>
             </ul>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/mohammedashhad2105/">
+                <a href="https://www.linkedin.com/in/mohammedashhad2105/" target='_blank'>
                 <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#0F0F0F"/>
 <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#0F0F0F"/>
@@ -21,7 +21,7 @@ function Footer() {
 
 
                 </a>
-                <a href="https://github.com/ashhad17/"><svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <a href="https://github.com/ashhad17/"  target='_blank'><svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     
     <title>github [#142]</title>
     <desc>Created with Sketch.</desc>

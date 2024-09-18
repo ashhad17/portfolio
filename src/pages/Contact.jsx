@@ -7,7 +7,7 @@ function Contact() {
   <div className="form-parent">
   <div class="form-container">
   <form class="form">
-    <span class="heading">Contact Us</span>
+    <span class="heading">Get In Touch</span>
 
     <div class="form-group">
       <input class="form-input" required="" type="text" />
