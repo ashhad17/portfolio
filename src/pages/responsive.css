@@ -1,9 +1,6 @@
 @media screen and (max-width: 900px) {
     
-      .links ul li{
-        margin-top: 10px;
-        
-      }
+      
       .main .content{
         width: 300px;
         display: flex;
@@ -31,9 +28,23 @@
     }
 }
 
-@media screen and (max-width: 650px) {
-    .links ul{
+@media screen and (max-width: 480px) {
+    nav{
+        margin-top: 10px;
+        flex-direction: column;
+        
+    }
+    .links{
+        display: none;
+    }
+    nav .menu{
+        /* display: block; */
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    .links ul{
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -42,13 +53,13 @@
       .links ul li{
         display: flex;
         justify-content: center;
-        /* margin: 20px; */
+        margin-bottom: 20px;
       }
-    .main{
+    /* .main{
         width: 50%;
         height: auto;
         
-    }
+    } */
     .main .content{
         margin-left: 40px;
         display: flex;
@@ -71,16 +82,46 @@
     .myName{
         font-size-adjust: 0.20;
     }
+    .about-content{
+        margin-left:20px;
+    }
 
-
-    .about-content p{
+    .about-content .about-me p{
         font-size: 1rem;
+        text-align: justify;
+        letter-spacing: .75px;
+        
+
       }
   .about-content{
     margin:0 40px;
     width: 270px;
   }
-  
-  
+  nav .close{
+    display: none;
+  }
+  nav .open{
+    transition: 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .open li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  nav .open li:hover{
+    background-color: #1b1b1b;
+  }
+  .vline{
+    display: none;
+  }
+  .cards{
+    margin: 0px;
+  }
   }
   

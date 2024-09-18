@@ -4,12 +4,17 @@ import "./animate.css"
 function MainContent() {
   return (
     <>
-    <div className="main">
-        <div className="content">
+    <div className="main" style={{
+          display:"flex",
+          flexWrap:"wrap",
+          justifyContent:"center",
+          alignItems:"center"
+          }}>
+        <div className="content" >
         
-        <h1>I'M <span className='myName'>Mohammed Ashhad</span></h1>
-        <h2> ,Software Developer.</h2>
-        <h2>Specialized in FrontEnd React Developer</h2>
+        <h1>I'M <span className='myName'>Mohammed Ashhad,</span></h1>
+        <h2 style={{textAlign:"center"}}>Software Developer.<br/><br/>Specialized in FrontEnd React Developer</h2>
+        {/* <h2></h2> */}
         <button class="button" id='btn'>Contact Me</button>
         </div>
         <div className="image">
