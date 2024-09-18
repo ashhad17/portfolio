@@ -34,15 +34,15 @@
         flex-direction: column;
         
     }
-    .links{
-        display: none;
+    nav .links{
+      display: none;
     }
     nav .menu{
         /* display: block; */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0;
+        margin: 20px;
     }
     .links ul{
         justify-content: center;
