@@ -18,7 +18,8 @@ function NavBar() {
     </ul>
     </div>
                  <div className="menu">
-            <button>Ashhad</button>
+            {/* <button>Ashhad</button> */}
+            <div></div>
             <a onClick={()=>{
               setIsOpen(!isOpen);
             }}>

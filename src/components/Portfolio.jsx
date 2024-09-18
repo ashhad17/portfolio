@@ -11,7 +11,7 @@ function Portfolio(props) {
     <p class="heading" >
       AL Razack Tours Internationals
     </p>
-    <button>View</button>
+    <button><a href="https://www.alrazacktours.com/" target='_blank'>View</a></button>
   </div>
 </div>
             </>
