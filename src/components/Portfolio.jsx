@@ -5,16 +5,16 @@ function Portfolio(props) {
     
             <>
             <div class="card-portfolio">
+  <div class="card2-portfolio">
+  <img src={image} alt="" />
     
-            <div className="card-content">
-            <img src={image} alt="" />
-    
-            <p class="heading" >
-              AL Razack Tours Internationals
-            </p>
-            <button>View</button>
-            </div>
-            </div></>
+    <p class="heading" >
+      AL Razack Tours Internationals
+    </p>
+    <button>View</button>
+  </div>
+</div>
+            </>
      )
 }
 

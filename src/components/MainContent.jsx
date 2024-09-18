@@ -7,8 +7,8 @@ function MainContent() {
     <div className="main">
         <div className="content">
         
-        <h1>I'M <span className='myName'>Mohammed Ashhad</span>, Software Developer.</h1>
-        
+        <h1>I'M <span className='myName'>Mohammed Ashhad</span></h1>
+        <h2> ,Software Developer.</h2>
         <h2>Specialized in FrontEnd React Developer</h2>
         <button class="button" id='btn'>Contact Me</button>
         </div>

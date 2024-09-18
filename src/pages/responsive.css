@@ -1,7 +1,23 @@
 @media screen and (max-width: 900px) {
-    nav{
-        margin: 20px;
-    }
+    
+      .links ul li{
+        margin-top: 10px;
+        
+      }
+      .main .content{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main .image{
+        width: 300px;
+        margin-left: 40px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     .main .content h1{
         margin: 0; 
         font-size: 1.25rem;
@@ -16,12 +32,33 @@
 }
 
 @media screen and (max-width: 650px) {
+    .links ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+      }
+      .links ul li{
+        display: flex;
+        justify-content: center;
+        /* margin: 20px; */
+      }
     .main{
         width: 50%;
         height: auto;
+        
     }
     .main .content{
-        justify-content: start;
+        margin-left: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .main .content h1{
         margin: 0; 
@@ -41,6 +78,7 @@
       }
   .about-content{
     margin:0 40px;
+    width: 270px;
   }
   
   
