@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
-import Services from './pages/Services';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import TeamMember from './pages/TeamMember';
-import CaseStudy from './pages/CaseStudy';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.jsx';
+import Home from './pages/Home.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import Services from './pages/Services.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
+import Blog from './pages/Blog.jsx';
+import BlogPost from './pages/BlogPost.jsx';
+import TeamMember from './pages/TeamMember.jsx';
+import CaseStudy from './pages/CaseStudy.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
