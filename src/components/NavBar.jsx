@@ -1,57 +1,124 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import logo from "../assets/logo.png"
-function NavBar() {
- const [isOpen,setIsOpen]=useState(false);
-  return (
-    <nav>
-      
-        
-  <div className="links">
-    
-<a href=""><img src={logo} alt="" style={{width:"120px"}}/></a>
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="#portfolio-container">Portfolio</a></li>
-      <li><a href="#skills">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div></div>
-    </div>
-                 <div className="menu">
-            {/* <button>Ashhad</button> */}
-            
-<a href=""><img src={logo} alt="" style={{width:"120px"}}/></a>
-      
-            <a onClick={()=>{
-              setIsOpen(!isOpen);
-            }}>
-              {(!isOpen)?(
-                
-            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 6.5H19V8H5V6.5Z" fill="#ffff"/>
-<path d="M5 16.5H19V18H5V16.5Z" fill="#ffff"/>
-<path d="M5 11.5H19V13H5V11.5Z" fill="#ffff"/>
-</svg>
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { HiMenu, HiX, HiMoon, HiSun } from 'react-icons/hi';
+import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './Logo';
 
-              ):(
-                <div>
-                <svg width="50px" height="50px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z" fill="#ffff"/>
-</svg>
-                </div>
-              )}
-            </a>
+function Navbar({ darkMode, setDarkMode }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about' },
+    // { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: { duration: 0.3, ease: 'easeInOut' }
+    },
+    open: {
+      opacity: 1,
+      height: 'auto',
+      transition: { duration: 0.3, ease: 'easeInOut' }
+    }
+  };
+
+  const linkVariants = {
+    closed: { x: -20, opacity: 0 },
+    open: i => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: i * 0.1, duration: 0.2 }
+    })
+  };
+
+  return (
+    <nav className="bg-white dark:bg-dark shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center">
+              <Logo />
+            </Link>
           </div>
-          <ul className={(isOpen)?("open"):("close")}>
-              <li><a href="">Home</a></li>
-              <li><a href="#portfolio-container">Portfolio</a></li>
-              <li><a href="#skills">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-        
-         </nav>
-  )
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link, i) => (
+              <motion.div
+                key={link.name}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to={link.path}
+                  className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-light"
+            >
+              {darkMode ? <HiSun className="h-5 w-5" /> : <HiMoon className="h-5 w-5" />}
+            </motion.button>
+          </div>
+
+          {/* Mobile Navigation Button */}
+          <div className="md:hidden flex items-center">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-light"
+            >
+              {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+            </motion.button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="md:hidden overflow-hidden"
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  custom={i}
+                  variants={linkVariants}
+                >
+                  <Link
+                    to={link.path}
+                    className="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
 }
 
-export default NavBar
+export default Navbar;
